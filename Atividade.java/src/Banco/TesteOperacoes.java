@@ -27,7 +27,7 @@ public class TesteOperacoes {
         System.out.println("Digite o saldo inicial:");
         double saldo = input.nextDouble();
 
-        System.out.println("Digite se a conta é poupaca ou corrente");
+        System.out.println("Digite se a conta é poupanca ou corrente");
         String tipoConta = input.nextLine();
          Conta conta;
         if ((tipoConta.toLowerCase()).equals("poupanca")) {
