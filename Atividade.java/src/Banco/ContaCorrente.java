@@ -2,7 +2,7 @@ package Banco;
 
 public class ContaCorrente extends Conta{
     double taxaManutencao = 50.0;
-    public ContaCorrente(String numeroDaAgencia, String numeroDaConta, double saldo, Cliente cliente) {
+    public ContaCorrente(int numeroDaAgencia, int numeroDaConta, double saldo, Cliente cliente) {
         super(numeroDaAgencia, numeroDaConta, saldo, cliente);
         
     }

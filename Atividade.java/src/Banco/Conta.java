@@ -1,27 +1,27 @@
 package Banco;
-
+import java.util.Scanner;
 public class Conta {
-    private String numeroDaAgencia;
-    private String numeroDaConta;
+    private int numeroDaAgencia;
+    private int numeroDaConta;
     private double saldo;
     private Cliente cliente;
 
-    public Conta(String numeroDaAgencia, String numeroDaConta, double saldo, Cliente cliente) {
+    public Conta(int numeroDaAgencia,int numeroDaConta, double saldo, Cliente cliente) {
         this.numeroDaAgencia = numeroDaAgencia;
         this.numeroDaConta = numeroDaConta;
         this.saldo = saldo;
         this.cliente = cliente;
     }
-    public String getNumeroDaAgencia() {
+    public int getNumeroDaAgencia() {
         return numeroDaAgencia;
     }
-    public void setNumeroDaAgencia(String numeroDaAgencia) {
+    public void setNumeroDaAgencia(int numeroDaAgencia) {
         this.numeroDaAgencia = numeroDaAgencia;
     }
-    public String getNumeroDaConta() {
+    public int getNumeroDaConta() {
         return numeroDaConta;
     }
-    public void setNumeroDaConta(String numeroDaConta) {
+    public void setNumeroDaConta(int numeroDaConta) {
         this.numeroDaConta = numeroDaConta;
     }
     public double getSaldo() {  //alterado private
@@ -45,9 +45,10 @@ public class Conta {
         return this.getSaldo();
     }
     public void transferencia(Conta conta) {
-       // Scanner input = new Scanner(System.in);
+       Scanner input = new Scanner(System.in);
        double valorTransferencia = 0.0;
        System.out.println("Digite o valor a ser trasnferido:");
+       valorTransferencia = input.nextDouble();
        if((this.getSaldo() - valorTransferencia) >= 0) {
        this.setSaldo(this.getSaldo() - valorTransferencia);
        conta.setSaldo(conta.getSaldo() + valorTransferencia);

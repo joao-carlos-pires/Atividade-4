@@ -2,7 +2,7 @@ package Banco;
 
 public class ContaPoupanca extends Conta{
     double taxaDeRendimento = 0.05;
-    public ContaPoupanca(String numeroDaAgencia, String numeroDaConta, double saldo, Cliente cliente) {
+    public ContaPoupanca(int numeroDaAgencia, int numeroDaConta, double saldo, Cliente cliente) {
         super(numeroDaAgencia, numeroDaConta, saldo, cliente);
         
     }
