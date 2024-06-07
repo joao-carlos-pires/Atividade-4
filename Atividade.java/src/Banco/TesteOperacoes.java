@@ -9,6 +9,7 @@ public class TesteOperacoes {
 
     public void criarConta() {
         Scanner input = new Scanner(System.in);
+        try {
         System.out.println("Digite o nome do cliente:");
         String nome = input.nextLine();
         input.nextLine();
@@ -18,7 +19,30 @@ public class TesteOperacoes {
         System.out.println("Digite a profissão do cliente: ");
         String profissao = input.next();
         Cliente cliente = new Cliente(nome, endereco, profissao);
-        input.close();
+        listaClientes.add(cliente);
+        System.out.println("Digite o número da agência:");
+        int numeroAgencia = input.nextInt();
+         System.out.println("Digite o número da conta:");
+        int numeroConta = input.nextInt();
+        System.out.println("Digite o saldo inicial:");
+        double saldo = input.nextDouble();
+
+        System.out.println("Digite se a conta é poupaca ou corrente");
+        String tipoConta = input.nextLine();
+         Conta conta;
+        if ((tipoConta.toLowerCase()).equals("poupanca")) {
+            conta = new ContaPoupanca(numeroAgencia, numeroConta, saldo, cliente);
+        } else {
+            conta = new ContaCorrente(numeroAgencia, numeroConta, saldo, cliente);
+        }
+        
+    } catch (NumberFormatException e) {
+        System.out.println("Erro: número de agência, conta ou saldo inválido.");
+    } catch (IllegalArgumentException e) {
+        System.out.println("Erro: " + e.getMessage());
+    }
+             
+       
     }
 
 
