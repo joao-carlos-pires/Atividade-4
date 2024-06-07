@@ -24,10 +24,10 @@ public class Conta {
     public void setNumeroDaConta(int numeroDaConta) {
         this.numeroDaConta = numeroDaConta;
     }
-    public double getSaldo() {  //alterado private
+    public double getSaldo() { 
         return saldo;
     }
-    private void setSaldo(double saldo) {  //alterado private
+    public void setSaldo(double saldo) {  
         this.saldo = saldo;
     }
     public Cliente getCliente() {
@@ -61,4 +61,5 @@ public class Conta {
     public void exibirSaldo() {
         System.out.println("O cliente: " + cliente.getNome() + " possui R$" + this.getSaldo());
     }
+    
 }

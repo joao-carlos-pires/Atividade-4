@@ -36,7 +36,9 @@ public class Cliente {
     }
     
     public void exibirAtributos() {
-        System.out.println("");
+        System.out.println("O nome do cliente é :" + this.getEndereco());
+        System.out.println("O endereço do cliente é : " + this.getEndereco());
+        System.out.println("A profissão do cliente é " + this.getProfissao());
     }
 
 }

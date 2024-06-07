@@ -7,16 +7,15 @@ public class ContaCorrente extends Conta{
         
     }
 
-    public void simularOperacao(int quantidadeDeMeses) {
+    public double simularOperacao(int quantidadeDeMeses) {
+        double total = 0.0;
         if (quantidadeDeMeses >= 0) { 
             double saldo = this.getSaldo();
           double custo = quantidadeDeMeses * taxaManutencao;
           saldo =  saldo - custo;
-          System.out.println("Em " + quantidadeDeMeses + ", o saldo do cliente será R$" + saldo); 
+          total = saldo;
         }
-        else {
-            System.out.println("O valor " + quantidadeDeMeses + "é inválido!");
-         }
-    }
+        return total;
+    }   
     
 }
